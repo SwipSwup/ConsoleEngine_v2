@@ -16,17 +16,9 @@ namespace Engine
         Window();
 
     private:
-        static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
-
-        std::thread messageThread;
-
-        void HandleMessages();
-
         bool CreateConsoleWindow();
 
         void DestroyConsoleWindow();
-
-        bool SetupMessageClass();
 
         void LoadConsoleFontInfo();
 

@@ -67,6 +67,54 @@ build CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.obj: CXX_COM
   OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
   OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Core\Window
 
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/Scene.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Core/Scene/Scene.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Core\Scene\Scene.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Core\Scene
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/GameObject.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/GameObject.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Objects\GameObject.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Objects
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/Component.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/Component.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Objects\Component\Component.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Objects\Component
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/RenderSystem/Renderer.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Core/RenderSystem/Renderer.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Core\RenderSystem\Renderer.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Core\RenderSystem
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector2D.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Vector/Vector2D.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Vector\Vector2D.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Vector
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector3D.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Vector/Vector3D.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Vector\Vector3D.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Vector
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Color/Color.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Color/Color.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Color\Color.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Color
+
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Sprite/Sprite.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Sprite/Sprite.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Sprite\Sprite.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Runtime\Utility\Sprite
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ConsoleEngine_v2
@@ -75,7 +123,7 @@ build CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.obj: CXX_COM
 #############################################
 # Link the executable ConsoleEngine_v2.exe
 
-build ConsoleEngine_v2.exe: CXX_EXECUTABLE_LINKER__ConsoleEngine_v2_Debug CMakeFiles/ConsoleEngine_v2.dir/main.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/ConsoleEngine.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.obj
+build ConsoleEngine_v2.exe: CXX_EXECUTABLE_LINKER__ConsoleEngine_v2_Debug CMakeFiles/ConsoleEngine_v2.dir/main.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/ConsoleEngine.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/Scene.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/GameObject.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/Component.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/RenderSystem/Renderer.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector2D.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector3D.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Color/Color.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Sprite/Sprite.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
