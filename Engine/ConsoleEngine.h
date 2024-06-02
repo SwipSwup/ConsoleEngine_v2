@@ -10,6 +10,7 @@
 namespace Engine
 {
     class Window;
+    class Renderer;
 
     struct EngineSettings
     {
@@ -46,22 +47,11 @@ namespace Engine
 
     public:
         void LoadSettings();
-        void LoadSettings(EngineSettings settings);
-
-    private:
-        void LoadDefaultScene();
-
-        void UpdateConsoleTitle(float deltaTime = 0);
-
-    public:
-        bool LoadScene(Scene* scene);
-
-    private:
-
-    public:
-        Window* GetWindow();
-
         void LoadSettings(EngineSettings* settings);
+
+    private:
+        Window* window;
+        Renderer* renderer;
     };
 
 } // Engine

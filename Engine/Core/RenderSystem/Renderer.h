@@ -23,7 +23,13 @@ namespace Engine
     class Renderer
     {
     public:
+        void Start();
+
         void Render();
+
+        void SetConsoleHandle(HANDLE hConsole);
+
+        void SetBufferSize(COORD size);
 
     private:
         COORD bufferSize;
@@ -50,6 +56,8 @@ namespace Engine
         void WDrawText(const char* text, Color color, int originX, int originY, int z);
 
         bool HasRenderObjectUpdated(int xy);
+
+        void UpdateConsoleMode(DWORD mode, bool bEnable);
     };
 
 } // Engine

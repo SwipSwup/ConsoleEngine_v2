@@ -15,7 +15,7 @@ namespace Engine
         data = ' ';
     }
 
-    RenderObject::RenderObject(wchar_t data, Color color): color(color)
+    RenderObject::RenderObject(wchar_t data, Color color) : color(color)
     {
         this->data = data;
     }
@@ -23,6 +23,19 @@ namespace Engine
     int Renderer::TranslateToBufferIndex(int x, int y, int xDimension)
     {
         return x + y * xDimension;
+    }
+
+    void Renderer::SetConsoleHandle(HANDLE hConsole)
+    {
+        this->hConsole = hConsole;
+    }
+
+    void Renderer::SetBufferSize(COORD size)
+    {
+        //this->bufferSize = {10, 10};
+
+        //125, 62
+        this->bufferSize = size;
     }
 
     bool Renderer::HasRenderObjectUpdated(int xy)
@@ -56,22 +69,25 @@ namespace Engine
                     }
                 }*/
 
-                SetConsoleCursorPosition(hConsole, COORD{(SHORT)x, (SHORT)y});
-                if (!WriteConsoleA(
+
+                wchar_t test = L'a';
+
+                SetConsoleCursorPosition(hConsole, COORD{(SHORT) x, (SHORT) y});
+                if (/*!WriteConsoleA(
                         hConsole,
                         c.GetEscapeCode(),
                         c.GetEscapeCodeLength(),
                         &charsWritten,
                         nullptr
-                ) || !WriteConsoleW(
+                ) ||*/ !WriteConsoleW(
                         hConsole,
-                        &obj.data,
+                        &test,
                         1,
                         &charsWritten,
                         nullptr
                 ))
                 {
-                    std::cerr << "Error writing to console" << std::endl;
+                    std::cerr << "[Renderer] Error writing to console" << std::endl;
                     return;
                 }
             }
@@ -137,7 +153,7 @@ namespace Engine
                 int buffY = bufferSize.Y - originY - sprite->textureDimensions->y + y;
 
                 //todo not super efficant
-                if(buffX < 0 || buffY < 0 || buffX > bufferSize.X - 1 || buffY > bufferSize.Y - 1)
+                if (buffX < 0 || buffY < 0 || buffX > bufferSize.X - 1 || buffY > bufferSize.Y - 1)
                 {
                     continue;
                 }
@@ -177,4 +193,11 @@ namespace Engine
             );
         }
     }
+
+    void Renderer::Start()
+    {
+        InitRenderBuffer();
+    }
+
+
 } // Engine

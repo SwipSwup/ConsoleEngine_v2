@@ -4,6 +4,8 @@
 
 #include <chrono>
 #include "ConsoleEngine.h"
+#include "Core/RenderSystem/Renderer.h"
+#include "Core/Window/Window.h"
 
 namespace Engine
 {
@@ -11,6 +13,17 @@ namespace Engine
 
     ConsoleEngine::ConsoleEngine()
     {
+        this->window = new Window();
+        this->renderer = new Renderer();
+
+        window->WRegisterRenderer(renderer);
+
+        renderer->Start();
+
+        //renderer->WDrawText("A", 0, 0, 0);
+
+        renderer->Render();
+
         /*this->window = new Window(100, 30);
         this->debugConsole = new Debug();
         this->inputSystem = new InputSystem();
@@ -101,7 +114,7 @@ namespace Engine
         if ((tCounter += deltaTime) >= settings->fpsUpdateInterval)
         {
             tCounter = 0;
-            UpdateConsoleTitle(deltaTime);
+            //UpdateConsoleTitle(deltaTime);
         }
     }
 
@@ -122,7 +135,7 @@ namespace Engine
         LoadSettings();
     }
 
-    void ConsoleEngine::UpdateConsoleTitle(float deltaTime)
+    /*void ConsoleEngine::UpdateConsoleTitle(float deltaTime)
     {
         //todo do this in the title
         //std::string title = activeScene->GetName();
@@ -132,7 +145,7 @@ namespace Engine
             //title += " | FPS: " + std::to_string((int) (1 / deltaTime));
         }
         //window->UpdateConsoleTitle(title.c_str());
-    }
+    }*/
 
     /*bool ConsoleEngine::LoadScene(Scene* scene)
     {

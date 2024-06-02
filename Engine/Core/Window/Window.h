@@ -10,6 +10,7 @@
 
 namespace Engine
 {
+    class Renderer;
     class Window
     {
     public:
@@ -25,6 +26,10 @@ namespace Engine
         void RedirectIO();
 
     public:
+        void WRegisterRenderer(Renderer* renderer);
+
+        void WUpdateConsoleMode(DWORD mode, bool bEnable);
+
         void WSetConsoleSize(short width, short height);
 
         void WSetConsoleTitle(char* title);
@@ -32,10 +37,22 @@ namespace Engine
         void WShowWindow();
 
         void WHideWindow();
+
+
     private:
+        DWORD dwMode{};
+
         HWND hwndConsole;
         HANDLE hConsole;
         CONSOLE_FONT_INFOEX fontConsole;
+        COORD windowSize;
+
+        Renderer* renderer;
+
+    public:
+        COORD GetWindowPixelSize();
+        COORD GetWindowCharacterSize();
+
 
     };
 

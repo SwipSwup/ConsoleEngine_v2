@@ -1,4 +1,4 @@
-# Install script for directory: C:/FH/SS2024/PROGR/ConsoleEngine_v2
+# Install script for directory: G:/FH/Sem2/PROGR/ConsoleEngine_v2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/david/AppData/Local/Programs/CLion Nova/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/FH/SS2024/PROGR/ConsoleEngine_v2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
