@@ -3,26 +3,25 @@
 //
 
 #include <chrono>
+#include <iostream>
 #include "ConsoleEngine.h"
 #include "Core/RenderSystem/Renderer.h"
 #include "Core/Window/Window.h"
+#include "Core/Scene/SceneManager.h"
+#include "Core/InputSystem/InputSystem.h"
 
 namespace Engine
 {
     EngineSettings* ConsoleEngine::settings = new EngineSettings();
+    SceneManager* ConsoleEngine::sceneManager = new SceneManager();
+    Renderer* ConsoleEngine::renderer = new Renderer();
+    Window* ConsoleEngine::window = new Window();
+    InputSystem* ConsoleEngine::inputSystem = new InputSystem();
 
     ConsoleEngine::ConsoleEngine()
     {
-        this->window = new Window();
-        this->renderer = new Renderer();
-
         window->WRegisterRenderer(renderer);
-
-        renderer->Start();
-
-        //renderer->WDrawText("A", 0, 0, 0);
-
-        renderer->Render();
+        sceneManager->Intialize(this);
 
         /*this->window = new Window(100, 30);
         this->debugConsole = new Debug();
@@ -40,9 +39,9 @@ namespace Engine
 
     ConsoleEngine::~ConsoleEngine()
     {
-        /*delete window;
-        delete debugConsole;
-        delete settings;*/
+        delete window;
+        delete renderer;
+        delete settings;
     }
 
     std::chrono::steady_clock::time_point previousTimePoint;
@@ -58,24 +57,24 @@ namespace Engine
 
         LoadSettings();
 
+        renderer->Initialize();
+
         Run();
     }
 
     void ConsoleEngine::Stop()
     {
+        delete renderer;
     }
 
     void ConsoleEngine::Run()
     {
-
-
         while (true)
         {
             Tick();
 
-            //TODO Render
-            //window->Render();
-
+            //TODO do in threat
+            renderer->Render();
         }
     }
 
@@ -87,6 +86,7 @@ namespace Engine
         previousTimePoint = currentTimePoint;
 
         //std::cout << (currentTimePoint - previousTimePoint).count() << std::endl;
+
 
         if ((currentTimePoint - fixedTickTimePoint).count() < std::chrono::duration_cast<
                 std::chrono::steady_clock::duration>(
@@ -109,18 +109,27 @@ namespace Engine
 
     void ConsoleEngine::TickScene(float deltaTime)
     {
-        //activeScene->Tick(deltaTime);
+        sceneManager->TickActiveScene(deltaTime);
+
+        std::string title = sceneManager->GetActiveScene()->GetName();
+
+
 
         if ((tCounter += deltaTime) >= settings->fpsUpdateInterval)
         {
             tCounter = 0;
-            //UpdateConsoleTitle(deltaTime);
+            if (settings->showFps)
+            {
+
+                title += " | FPS: " + std::to_string((int) (1 / deltaTime));
+            }
+            window->WSetConsoleTitle(const_cast<char*>(title.c_str()));
         }
     }
 
     void ConsoleEngine::FixTickScene()
     {
-        //activeScene->FixTick();
+        sceneManager->FixTickActiveScene();
     }
 
     void ConsoleEngine::LoadSettings()

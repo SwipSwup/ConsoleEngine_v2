@@ -38,12 +38,7 @@ namespace Engine
         this->bufferSize = size;
     }
 
-    bool Renderer::HasRenderObjectUpdated(int xy)
-    {
-        return previousRenderBuffer[xy].data != renderBuffer[xy].data ||
-               previousRenderBuffer[xy].color != renderBuffer[xy].color;
-    }
-
+    //TODO create 4 thread and split console into 4 sections
     void Renderer::Render()
     {
         DWORD charsWritten;
@@ -53,35 +48,28 @@ namespace Engine
             for (int x = 0; x < bufferSize.X; ++x)
             {
                 int bufferIndex = TranslateToBufferIndex(x, y, bufferSize.X);
+                //if (!updateBuffer[bufferIndex])
+
+                if (!HasRenderObjectUpdated(bufferIndex))
+                {
+                    continue;
+                }
+                return;
+
                 RenderObject obj = renderBuffer[bufferIndex];
 
                 Color c = obj.color;
 
-                /*if (!HasRenderObjectUpdated(bufferIndex))
-                {
-                    if (bHighlightUnchangedPositions)
-                    {
-                        c = Color::GRNHB;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }*/
-
-
-                wchar_t test = L'a';
-
                 SetConsoleCursorPosition(hConsole, COORD{(SHORT) x, (SHORT) y});
-                if (/*!WriteConsoleA(
+                if (!WriteConsoleA(
                         hConsole,
                         c.GetEscapeCode(),
                         c.GetEscapeCodeLength(),
                         &charsWritten,
                         nullptr
-                ) ||*/ !WriteConsoleW(
+                ) || !WriteConsoleW(
                         hConsole,
-                        &test,
+                        &obj.data,
                         1,
                         &charsWritten,
                         nullptr
@@ -102,6 +90,7 @@ namespace Engine
         previousRenderBuffer = new RenderObject[bufferSize.X * bufferSize.Y];
         renderBuffer = new RenderObject[bufferSize.X * bufferSize.Y];
         zBufferIndex = new int[bufferSize.X * bufferSize.Y];
+        updateBuffer = new bool[bufferSize.X * bufferSize.Y];
 
         for (int i = 0; i < bufferSize.X * bufferSize.Y; ++i)
         {
@@ -113,11 +102,10 @@ namespace Engine
     {
         memcpy(previousRenderBuffer, renderBuffer, sizeof(RenderObject) * bufferSize.X * bufferSize.Y);
 
-        delete[] renderBuffer;
-        renderBuffer = new RenderObject[bufferSize.X * bufferSize.Y];
-
         for (int i = 0; i < bufferSize.X * bufferSize.Y; ++i)
         {
+            renderBuffer[i] = RenderObject();
+            updateBuffer[i] = false;
             zBufferIndex[i] = -1;
         }
     }
@@ -130,6 +118,11 @@ namespace Engine
             return;
         }
 
+        //TODO smth is wrong herer
+        /*if (!HasRenderObjectUpdated(xy))
+        {
+        }*/
+            updateBuffer[xy] = true;
         ForceWriteRawIntoRenderBuffer(xy, z, data, color);
     }
 
@@ -151,6 +144,7 @@ namespace Engine
             {
                 int buffX = x + originX;
                 int buffY = bufferSize.Y - originY - sprite->textureDimensions->y + y;
+
 
                 //todo not super efficant
                 if (buffX < 0 || buffY < 0 || buffX > bufferSize.X - 1 || buffY > bufferSize.Y - 1)
@@ -194,10 +188,14 @@ namespace Engine
         }
     }
 
-    void Renderer::Start()
+    void Renderer::Initialize()
     {
         InitRenderBuffer();
     }
 
-
+    bool Renderer::HasRenderObjectUpdated(int xy)
+    {
+        return previousRenderBuffer[xy].data != renderBuffer[xy].data ||
+               previousRenderBuffer[xy].color != renderBuffer[xy].color;
+    }
 } // Engine

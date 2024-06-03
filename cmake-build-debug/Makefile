@@ -47,10 +47,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = G:\IDEs\JetBrains\apps\CLion\ch-0\241.15989.121\bin\cmake\win\x64\bin\cmake.exe
+CMAKE_COMMAND = G:\IDEs\JetBrains\apps\CLion\ch-0\241.17011.124\bin\cmake\win\x64\bin\cmake.exe
 
 # The command to remove a file.
-RM = G:\IDEs\JetBrains\apps\CLion\ch-0\241.15989.121\bin\cmake\win\x64\bin\cmake.exe -E rm -f
+RM = G:\IDEs\JetBrains\apps\CLion\ch-0\241.17011.124\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = G:\FH\Sem2\PROGR\ConsoleEngine_v2\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	G:\IDEs\JetBrains\apps\CLion\ch-0\241.15989.121\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	G:\IDEs\JetBrains\apps\CLion\ch-0\241.17011.124\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	G:\IDEs\JetBrains\apps\CLion\ch-0\241.15989.121\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	G:\IDEs\JetBrains\apps\CLion\ch-0\241.17011.124\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -152,6 +152,30 @@ Engine/ConsoleEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/ConsoleEngine.cpp.s
 .PHONY : Engine/ConsoleEngine.cpp.s
 
+Engine/Core/InputSystem/InputSystem.obj: Engine/Core/InputSystem/InputSystem.cpp.obj
+.PHONY : Engine/Core/InputSystem/InputSystem.obj
+
+# target to build an object file
+Engine/Core/InputSystem/InputSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/InputSystem/InputSystem.cpp.obj
+.PHONY : Engine/Core/InputSystem/InputSystem.cpp.obj
+
+Engine/Core/InputSystem/InputSystem.i: Engine/Core/InputSystem/InputSystem.cpp.i
+.PHONY : Engine/Core/InputSystem/InputSystem.i
+
+# target to preprocess a source file
+Engine/Core/InputSystem/InputSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/InputSystem/InputSystem.cpp.i
+.PHONY : Engine/Core/InputSystem/InputSystem.cpp.i
+
+Engine/Core/InputSystem/InputSystem.s: Engine/Core/InputSystem/InputSystem.cpp.s
+.PHONY : Engine/Core/InputSystem/InputSystem.s
+
+# target to generate assembly for a file
+Engine/Core/InputSystem/InputSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/InputSystem/InputSystem.cpp.s
+.PHONY : Engine/Core/InputSystem/InputSystem.cpp.s
+
 Engine/Core/RenderSystem/Renderer.obj: Engine/Core/RenderSystem/Renderer.cpp.obj
 .PHONY : Engine/Core/RenderSystem/Renderer.obj
 
@@ -200,6 +224,30 @@ Engine/Core/Scene/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/Scene.cpp.s
 .PHONY : Engine/Core/Scene/Scene.cpp.s
 
+Engine/Core/Scene/SceneManager.obj: Engine/Core/Scene/SceneManager.cpp.obj
+.PHONY : Engine/Core/Scene/SceneManager.obj
+
+# target to build an object file
+Engine/Core/Scene/SceneManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/SceneManager.cpp.obj
+.PHONY : Engine/Core/Scene/SceneManager.cpp.obj
+
+Engine/Core/Scene/SceneManager.i: Engine/Core/Scene/SceneManager.cpp.i
+.PHONY : Engine/Core/Scene/SceneManager.i
+
+# target to preprocess a source file
+Engine/Core/Scene/SceneManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/SceneManager.cpp.i
+.PHONY : Engine/Core/Scene/SceneManager.cpp.i
+
+Engine/Core/Scene/SceneManager.s: Engine/Core/Scene/SceneManager.cpp.s
+.PHONY : Engine/Core/Scene/SceneManager.s
+
+# target to generate assembly for a file
+Engine/Core/Scene/SceneManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/SceneManager.cpp.s
+.PHONY : Engine/Core/Scene/SceneManager.cpp.s
+
 Engine/Core/Window/Window.obj: Engine/Core/Window/Window.cpp.obj
 .PHONY : Engine/Core/Window/Window.obj
 
@@ -247,6 +295,54 @@ Engine/Runtime/Objects/Component/Component.s: Engine/Runtime/Objects/Component/C
 Engine/Runtime/Objects/Component/Component.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/Component.cpp.s
 .PHONY : Engine/Runtime/Objects/Component/Component.cpp.s
+
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.obj: Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.obj
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.obj
+
+# target to build an object file
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.obj
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.obj
+
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.i: Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.i
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.i
+
+# target to preprocess a source file
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.i
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.i
+
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.s: Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.s
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.s
+
+# target to generate assembly for a file
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.s
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.s
+
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.obj: Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.obj
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.obj
+
+# target to build an object file
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.obj
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.obj
+
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.i: Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.i
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.i
+
+# target to preprocess a source file
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.i
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.i
+
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.s: Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.s
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.s
+
+# target to generate assembly for a file
+Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.s
+.PHONY : Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.s
 
 Engine/Runtime/Objects/GameObject.obj: Engine/Runtime/Objects/GameObject.cpp.obj
 .PHONY : Engine/Runtime/Objects/GameObject.obj
@@ -368,6 +464,30 @@ Engine/Runtime/Utility/Vector/Vector3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector3D.cpp.s
 .PHONY : Engine/Runtime/Utility/Vector/Vector3D.cpp.s
 
+Game/Player/CameraController.obj: Game/Player/CameraController.cpp.obj
+.PHONY : Game/Player/CameraController.obj
+
+# target to build an object file
+Game/Player/CameraController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Player/CameraController.cpp.obj
+.PHONY : Game/Player/CameraController.cpp.obj
+
+Game/Player/CameraController.i: Game/Player/CameraController.cpp.i
+.PHONY : Game/Player/CameraController.i
+
+# target to preprocess a source file
+Game/Player/CameraController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Player/CameraController.cpp.i
+.PHONY : Game/Player/CameraController.cpp.i
+
+Game/Player/CameraController.s: Game/Player/CameraController.cpp.s
+.PHONY : Game/Player/CameraController.s
+
+# target to generate assembly for a file
+Game/Player/CameraController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Player/CameraController.cpp.s
+.PHONY : Game/Player/CameraController.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -404,18 +524,30 @@ help:
 	@echo ... Engine/ConsoleEngine.obj
 	@echo ... Engine/ConsoleEngine.i
 	@echo ... Engine/ConsoleEngine.s
+	@echo ... Engine/Core/InputSystem/InputSystem.obj
+	@echo ... Engine/Core/InputSystem/InputSystem.i
+	@echo ... Engine/Core/InputSystem/InputSystem.s
 	@echo ... Engine/Core/RenderSystem/Renderer.obj
 	@echo ... Engine/Core/RenderSystem/Renderer.i
 	@echo ... Engine/Core/RenderSystem/Renderer.s
 	@echo ... Engine/Core/Scene/Scene.obj
 	@echo ... Engine/Core/Scene/Scene.i
 	@echo ... Engine/Core/Scene/Scene.s
+	@echo ... Engine/Core/Scene/SceneManager.obj
+	@echo ... Engine/Core/Scene/SceneManager.i
+	@echo ... Engine/Core/Scene/SceneManager.s
 	@echo ... Engine/Core/Window/Window.obj
 	@echo ... Engine/Core/Window/Window.i
 	@echo ... Engine/Core/Window/Window.s
 	@echo ... Engine/Runtime/Objects/Component/Component.obj
 	@echo ... Engine/Runtime/Objects/Component/Component.i
 	@echo ... Engine/Runtime/Objects/Component/Component.s
+	@echo ... Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.obj
+	@echo ... Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.i
+	@echo ... Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.s
+	@echo ... Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.obj
+	@echo ... Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.i
+	@echo ... Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.s
 	@echo ... Engine/Runtime/Objects/GameObject.obj
 	@echo ... Engine/Runtime/Objects/GameObject.i
 	@echo ... Engine/Runtime/Objects/GameObject.s
@@ -431,6 +563,9 @@ help:
 	@echo ... Engine/Runtime/Utility/Vector/Vector3D.obj
 	@echo ... Engine/Runtime/Utility/Vector/Vector3D.i
 	@echo ... Engine/Runtime/Utility/Vector/Vector3D.s
+	@echo ... Game/Player/CameraController.obj
+	@echo ... Game/Player/CameraController.i
+	@echo ... Game/Player/CameraController.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

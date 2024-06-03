@@ -10,15 +10,20 @@ namespace Engine
 
     struct Vector3D
     {
-        Vector3D(int x, int y, int z);
+        Vector3D(float x, float y, float z);
 
-        int x, y, z;
+        float x, y, z;
 
         //Vector3D operator =(Vector3D);
 
         Vector3D operator+(Vector3D vector);
+        Vector3D operator*(float num);
+
+        Vector3D* operator*=(float num);
 
         Vector3D* operator+=(Vector3D vector);
+
+        bool operator==(Vector3D vector);
     };
 
 } // Engine

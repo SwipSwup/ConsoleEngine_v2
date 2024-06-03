@@ -6,21 +6,26 @@
 #include <thread>
 #include "Window.h"
 #include "../RenderSystem/Renderer.h"
+#include "../../Runtime/Utility/Color/Color.h"
 
 namespace Engine
 {
     Window::Window()
     {
-        CreateConsoleWindow();
+        bool b = CreateConsoleWindow();
     }
 
     bool Window::CreateConsoleWindow()
     {
         AllocConsole();
-        //redirectIO();
         hwndConsole = GetConsoleWindow();
         hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-        if (!hwndConsole || !hConsole) return false;
+
+        if (hConsole == INVALID_HANDLE_VALUE)
+        {
+            std::cerr << "[Window] Error getting console handle" << std::endl;
+            return false;
+        }
 
         if (!GetConsoleMode(hConsole, &dwMode))
         {
@@ -28,7 +33,18 @@ namespace Engine
             return false;
         }
 
-        RedirectIO();
+
+
+        /*WUpdateConsoleMode(ENABLE_QUICK_EDIT_MODE, true);
+        WUpdateConsoleMode(ENABLE_EXTENDED_FLAGS , false);*/
+
+        //TODO make this modular
+        CONSOLE_CURSOR_INFO cursorInfo;
+        GetConsoleCursorInfo(hConsole, &cursorInfo);
+        //cursorInfo.bVisible = false; // Set cursor visibility to false (hide)
+        SetConsoleCursorInfo(hConsole, &cursorInfo);
+
+        WUpdateConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING, true);
 
         LoadConsoleFontInfo();
 
@@ -36,9 +52,8 @@ namespace Engine
         //360 360
         WSetConsoleSize(1000, 1000);
 
-        WUpdateConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING, true);
-
         WShowWindow();
+
         return true;
     }
 
@@ -162,7 +177,7 @@ namespace Engine
     {
         this->renderer = renderer;
 
-        renderer->SetConsoleHandle(renderer);
+        renderer->SetConsoleHandle(hConsole);
         renderer->SetBufferSize(GetWindowCharacterSize());
     }
 

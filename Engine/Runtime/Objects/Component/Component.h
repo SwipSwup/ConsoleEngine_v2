@@ -9,11 +9,14 @@ namespace Engine
 {
 
     class GameObject;
+    struct Vector3D;
     class Component
     {
     protected:
         virtual ~Component();
         GameObject* root_ref;
+
+        Vector3D* GetPosition();
 
     public:
         void

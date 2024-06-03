@@ -15,6 +15,18 @@ namespace Engine
         position = new Vector3D(0, 0, 0);
     }
 
+    GameObject::GameObject(char* name)
+    {
+        this->name = name;
+
+        position = new Vector3D(0, 0, 0);
+    }
+
+    GameObject::GameObject()
+    {
+        position = new Vector3D(0, 0, 0);
+    }
+
     Scene* GameObject::GetScene()
     {
         return scene_ref;
@@ -70,4 +82,6 @@ namespace Engine
             component->OnSpawn();
         }
     }
+
+
 } // Engine

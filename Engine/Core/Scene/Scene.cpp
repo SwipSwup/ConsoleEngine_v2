@@ -2,8 +2,10 @@
 // Created by david on 01/06/2024.
 //
 
+#include <iostream>
 #include "Scene.h"
-#include "../../Runtime/Objects/GameObject.h"
+#include "Runtime/Objects/GameObject.h"
+#include "SceneManager.h"
 
 namespace Engine
 {
@@ -12,14 +14,16 @@ namespace Engine
         this->name = name;
     }
 
-    void Scene::OnSceneLoad(ConsoleEngine* engine)
+    void Scene::Load(SceneManager* sceneManager)
     {
-        this->engine = engine;
+        this->sceneManager = sceneManager;
+
+        SpawnSceneObjects();
     }
 
     void Scene::Tick(float deltaTime)
     {
-        for (GameObject* object : loadedGameObjects)
+        for (GameObject* object: loadedGameObjects)
         {
             object->Tick(deltaTime);
         }
@@ -27,7 +31,7 @@ namespace Engine
 
     void Scene::FixTick()
     {
-        for (GameObject* object : loadedGameObjects)
+        for (GameObject* object: loadedGameObjects)
         {
             object->FixTick();
         }
@@ -41,13 +45,36 @@ namespace Engine
         gameObject->OnSpawn();
     }
 
-    ConsoleEngine* Scene::GetEngine()
-    {
-        return engine;
-    }
-
     const char* Scene::GetName()
     {
         return name;
+    }
+
+    void Scene::AddSceneObject(GameObject* gameObject)
+    {
+        sceneObjects.push_back(gameObject);
+    }
+
+    void Scene::Destroy(GameObject* gameObject)
+    {
+        loadedGameObjects.remove(gameObject);
+    }
+
+    CameraComponent* Scene::GetSceneCamera()
+    {
+        return sceneCamera;
+    }
+
+    void Scene::SetSceneCamera(CameraComponent* camera)
+    {
+        sceneCamera = camera;
+    }
+
+    void Scene::SpawnSceneObjects()
+    {
+        for (GameObject* item: sceneObjects)
+        {
+            Spawn(item);
+        }
     }
 } // Engine

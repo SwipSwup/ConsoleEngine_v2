@@ -20,11 +20,14 @@ namespace Engine
     {
 
     public:
+        GameObject();
+        GameObject(char* name);
         GameObject(Scene* root);
 
         Vector3D* position;
     private:
         Scene* scene_ref;
+        char* name;
         std::list<Component*> components;
 
     public:

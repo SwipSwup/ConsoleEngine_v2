@@ -23,7 +23,7 @@ namespace Engine
     class Renderer
     {
     public:
-        void Start();
+        void Initialize();
 
         void Render();
 
@@ -31,11 +31,14 @@ namespace Engine
 
         void SetBufferSize(COORD size);
 
+        bool bRenderThreadActive = false;
+
     private:
         COORD bufferSize;
         RenderObject* previousRenderBuffer{};
         RenderObject* renderBuffer{};
-        HANDLE hConsole;
+        bool* updateBuffer;
+        HANDLE hConsole{};
         int* zBufferIndex{};
 
         int TranslateToBufferIndex(int x, int y, int xDimension);
@@ -48,16 +51,14 @@ namespace Engine
 
         void ForceWriteRawIntoRenderBuffer(int xy, int z, wchar_t data, Color color);
 
+        bool HasRenderObjectUpdated(int xy);
+
     public:
         void WDrawSprite(Sprite* sprite, int originX, int originY, int z);
 
         void WDrawText(const char* text, int originX, int originY, int z);
 
         void WDrawText(const char* text, Color color, int originX, int originY, int z);
-
-        bool HasRenderObjectUpdated(int xy);
-
-        void UpdateConsoleMode(DWORD mode, bool bEnable);
     };
 
 } // Engine

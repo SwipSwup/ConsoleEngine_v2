@@ -27,4 +27,9 @@ namespace Engine
     void Engine::Component::OnSpawn()
     {
     }
+
+    Vector3D* Component::GetPosition()
+    {
+        return root_ref->position;
+    }
 } // Engine

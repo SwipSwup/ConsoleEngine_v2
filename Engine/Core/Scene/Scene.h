@@ -10,34 +10,49 @@
 namespace Engine
 {
 
-    class ConsoleEngine;
+    class SceneManager;
     class GameObject;
+    class CameraComponent;
     class Scene
     {
     public:
         Scene(char* name);
 
-        void OnSceneLoad(ConsoleEngine* engine);
+        void Load(SceneManager* engine);
 
         void Tick(float deltaTime);
 
         void FixTick();
 
     private:
-        ConsoleEngine* engine;
+        SceneManager* sceneManager;
 
         const char* name;
 
     public:
-        ConsoleEngine* GetEngine();
-
         const char* GetName();
 
     private:
+        std::list<GameObject*> sceneObjects;
+
         std::list<GameObject*> loadedGameObjects;
 
     public:
         void Spawn(GameObject* gameObject);
+
+        void Destroy(GameObject* gameObject);
+
+        void AddSceneObject(GameObject* gameObject);
+
+    private:
+        CameraComponent* sceneCamera;
+
+        void SpawnSceneObjects();
+
+    public:
+        CameraComponent* GetSceneCamera();
+
+        void SetSceneCamera(CameraComponent* camera);
     };
 
 } // Engine

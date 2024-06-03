@@ -13,7 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -27,7 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 4,
 				"parent" : 0
 			}
 		]
@@ -39,6 +46,13 @@
 			[
 				{
 					"fragment" : "-g -fdiagnostics-color=always"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine"
 				}
 			],
 			"language" : "CXX",
@@ -62,7 +76,12 @@
 				13,
 				15,
 				17,
-				19
+				19,
+				21,
+				23,
+				25,
+				27,
+				29
 			]
 		}
 	],
@@ -109,7 +128,12 @@
 				13,
 				15,
 				17,
-				19
+				19,
+				21,
+				23,
+				25,
+				27,
+				29
 			]
 		},
 		{
@@ -125,7 +149,12 @@
 				14,
 				16,
 				18,
-				20
+				20,
+				22,
+				24,
+				26,
+				28,
+				30
 			]
 		}
 	],
@@ -245,6 +274,61 @@
 		{
 			"backtrace" : 1,
 			"path" : "Engine/Runtime/Utility/Sprite/Sprite.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Engine/Core/Scene/SceneManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/Scene/SceneManager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Engine/Core/InputSystem/InputSystem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Engine/Core/InputSystem/InputSystem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Game/Player/CameraController.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Game/Player/CameraController.h",
 			"sourceGroupIndex" : 1
 		}
 	],

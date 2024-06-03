@@ -11,10 +11,10 @@
 				<Option working_dir="G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ConsoleEngine_v2">
@@ -24,19 +24,20 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 ConsoleEngine_v2"/>
-					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 ConsoleEngine_v2"/>
+					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ConsoleEngine_v2/fast">
@@ -46,39 +47,40 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 ConsoleEngine_v2/fast"/>
-					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 ConsoleEngine_v2/fast"/>
+					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.15989.121/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/bin/mingw32-make.exe -f &quot;G:/FH/Sem2/PROGR/ConsoleEngine_v2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -86,6 +88,12 @@
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/ConsoleEngine.h">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/InputSystem/InputSystem.cpp">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/InputSystem/InputSystem.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/RenderSystem/Renderer.cpp">
@@ -100,6 +108,12 @@
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/Scene/Scene.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/Scene/SceneManager.cpp">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/Scene/SceneManager.h">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/Window/Window.cpp">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
@@ -110,6 +124,18 @@
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/Component.h">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.h">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/GameObject.cpp">
@@ -140,6 +166,12 @@
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Vector/Vector3D.h">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Game/Player/CameraController.cpp">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Game/Player/CameraController.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/main.cpp">

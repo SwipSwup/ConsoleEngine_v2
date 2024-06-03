@@ -5,12 +5,14 @@
 #ifndef CONSOLEENGINE_V2_CONSOLEENGINE_H
 #define CONSOLEENGINE_V2_CONSOLEENGINE_H
 
+#include <thread>
 #include "Core/Scene/Scene.h"
 
 namespace Engine
 {
     class Window;
     class Renderer;
+    class InputSystem;
 
     struct EngineSettings
     {
@@ -34,6 +36,11 @@ namespace Engine
 
         static EngineSettings* settings;
 
+        static SceneManager* sceneManager;
+        static Window* window;
+        static Renderer* renderer;
+        static InputSystem* inputSystem;
+
     private:
 
         void Run();
@@ -50,8 +57,7 @@ namespace Engine
         void LoadSettings(EngineSettings* settings);
 
     private:
-        Window* window;
-        Renderer* renderer;
+
     };
 
 } // Engine
