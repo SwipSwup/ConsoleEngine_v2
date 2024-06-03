@@ -38,7 +38,7 @@ namespace Engine
         std::list<GameObject*> loadedGameObjects;
 
     public:
-        void Spawn(GameObject* gameObject);
+        GameObject* Spawn(GameObject* gameObject);
 
         void Destroy(GameObject* gameObject);
 

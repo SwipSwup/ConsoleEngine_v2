@@ -27,6 +27,8 @@ namespace Engine
         virtual void FixTick();
 
         virtual void OnSpawn();
+
+        virtual Component* Copy();
     };
 
 } // Engine

@@ -32,4 +32,9 @@ namespace Engine
     {
         return root_ref->position;
     }
+
+    Component* Component::Copy()
+    {
+        return new this;
+    }
 } // Engine

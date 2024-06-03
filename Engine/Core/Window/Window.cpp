@@ -41,7 +41,7 @@ namespace Engine
         //TODO make this modular
         CONSOLE_CURSOR_INFO cursorInfo;
         GetConsoleCursorInfo(hConsole, &cursorInfo);
-        //cursorInfo.bVisible = false; // Set cursor visibility to false (hide)
+        cursorInfo.bVisible = false; // Set cursor visibility to false (hide)
         SetConsoleCursorInfo(hConsole, &cursorInfo);
 
         WUpdateConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING, true);

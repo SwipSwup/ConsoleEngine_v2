@@ -2,6 +2,7 @@
 // Created by david on 01/06/2024.
 //
 
+#include <typeinfo>
 #include "GameObject.h"
 #include "../Utility/Vector/Vector3D.h"
 #include "Component/Component.h"
@@ -25,6 +26,16 @@ namespace Engine
     GameObject::GameObject()
     {
         position = new Vector3D(0, 0, 0);
+    }
+
+    GameObject::GameObject(GameObject* gameObject)
+    {
+        position = gameObject->position;
+        for (Component* item: gameObject->GetComponents()) {
+            components.push_back(item->Copy());
+        }
+
+        name = gameObject->name;
     }
 
     Scene* GameObject::GetScene()
@@ -82,6 +93,14 @@ namespace Engine
             component->OnSpawn();
         }
     }
+
+    GameObject* GameObject::Clone(GameObject* gameObject)
+    {
+        return new GameObject(gameObject);
+    }
+
+
+
 
 
 } // Engine

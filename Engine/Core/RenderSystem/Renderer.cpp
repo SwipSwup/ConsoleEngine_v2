@@ -54,8 +54,6 @@ namespace Engine
                 {
                     continue;
                 }
-                return;
-
                 RenderObject obj = renderBuffer[bufferIndex];
 
                 Color c = obj.color;

@@ -37,12 +37,15 @@ namespace Engine
         }
     }
 
-    void Scene::Spawn(GameObject* gameObject)
+    GameObject* Scene::Spawn(GameObject* gameObject)
     {
-        loadedGameObjects.push_back(gameObject);
+        GameObject* object = gameObject->Clone(gameObject);
+        loadedGameObjects.push_back(object);
 
-        gameObject->SetScene(this);
-        gameObject->OnSpawn();
+        object->SetScene(this);
+        object->OnSpawn();
+
+        return object;
     }
 
     const char* Scene::GetName()

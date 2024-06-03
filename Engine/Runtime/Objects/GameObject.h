@@ -23,6 +23,7 @@ namespace Engine
         GameObject();
         GameObject(char* name);
         GameObject(Scene* root);
+        GameObject(GameObject* gameObject);
 
         Vector3D* position;
     private:
@@ -52,6 +53,8 @@ namespace Engine
 
             return nullptr;
         }
+
+        virtual GameObject* Clone(GameObject* gameObject);
 
         Scene* GetScene();
 
