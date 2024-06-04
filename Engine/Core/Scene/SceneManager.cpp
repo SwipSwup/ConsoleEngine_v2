@@ -20,6 +20,7 @@ namespace Engine
 
     void SceneManager::TickActiveScene(float deltaTime)
     {
+
         if(activeScene)
             activeScene->Tick(deltaTime);
     }

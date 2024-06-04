@@ -3,6 +3,7 @@
 //
 
 #include <typeinfo>
+#include <iostream>
 #include "GameObject.h"
 #include "../Utility/Vector/Vector3D.h"
 #include "Component/Component.h"
@@ -31,8 +32,9 @@ namespace Engine
     GameObject::GameObject(GameObject* gameObject)
     {
         position = gameObject->position;
+        //TODO find solution to create new instances of component
         for (Component* item: gameObject->GetComponents()) {
-            components.push_back(item->Copy());
+            components.push_back(item->Clone());
         }
 
         name = gameObject->name;
@@ -63,6 +65,7 @@ namespace Engine
     {
         for (Component* component : components)
         {
+
             component->Tick(deltaTime);
         }
     }
@@ -87,6 +90,7 @@ namespace Engine
 
     void GameObject::OnSpawn()
     {
+
         for (Component* component : components)
         {
             component->SetRoot(this);
@@ -99,8 +103,10 @@ namespace Engine
         return new GameObject(gameObject);
     }
 
-
-
+    const std::list<Component*> GameObject::GetComponents() const
+    {
+        return components;
+    }
 
 
 } // Engine

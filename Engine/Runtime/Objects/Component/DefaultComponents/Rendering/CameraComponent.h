@@ -22,6 +22,9 @@ namespace Engine
         void OnSpawn() override;
 
         void DrawSprite(Sprite* sprite, Vector3D* position);
+
+        Component* Clone() override;
+
     };
 
 } // Engine

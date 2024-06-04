@@ -14,6 +14,7 @@ namespace Engine
 {
     void SpriteRenderComponent::Tick(float deltaTime)
     {
+
         Component::Tick(deltaTime);
 
         if(camera_ref)
@@ -22,11 +23,25 @@ namespace Engine
 
     void SpriteRenderComponent::OnSpawn()
     {
+
         Component::OnSpawn();
 
         camera_ref = ConsoleEngine::sceneManager->GetActiveScene()->GetSceneCamera();
 
         if(!camera_ref)
             std::cerr << "[SpriteRenderComponent] No camera in scene" << std::endl;
+    }
+
+    Component* SpriteRenderComponent::Clone()
+    {
+        SpriteRenderComponent* newComponent = new SpriteRenderComponent();
+        newComponent->SetComponentData(this);
+        return newComponent;
+    }
+
+    void SpriteRenderComponent::SetComponentData(Component* reference)
+    {
+        Component::SetComponentData(reference);
+        sprite_ref = ((SpriteRenderComponent*) reference)->sprite_ref;
     }
 } // Engine

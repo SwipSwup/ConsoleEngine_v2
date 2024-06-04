@@ -22,13 +22,15 @@ namespace Engine
         void
         SetRoot(GameObject* root);
 
+        virtual Component* Clone();
+
+        virtual void SetComponentData(Component* reference);
+
     public:
         virtual void Tick(float deltaTime);
         virtual void FixTick();
 
         virtual void OnSpawn();
-
-        virtual Component* Copy();
     };
 
 } // Engine

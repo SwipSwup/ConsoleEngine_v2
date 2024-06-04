@@ -23,10 +23,14 @@ namespace Engine
 
     void Scene::Tick(float deltaTime)
     {
+
         for (GameObject* object: loadedGameObjects)
         {
+
             object->Tick(deltaTime);
+
         }
+
     }
 
     void Scene::FixTick()
@@ -39,13 +43,24 @@ namespace Engine
 
     GameObject* Scene::Spawn(GameObject* gameObject)
     {
+        //TODO create new instance of the gameObject
+
         GameObject* object = gameObject->Clone(gameObject);
         loadedGameObjects.push_back(object);
+
 
         object->SetScene(this);
         object->OnSpawn();
 
+
         return object;
+
+        /*loadedGameObjects.push_back(gameObject);
+
+        gameObject->SetScene(this);
+        gameObject->OnSpawn();
+
+        return gameObject;*/
     }
 
     const char* Scene::GetName()
@@ -75,9 +90,10 @@ namespace Engine
 
     void Scene::SpawnSceneObjects()
     {
-        for (GameObject* item: sceneObjects)
+        for (GameObject* object: sceneObjects)
         {
-            Spawn(item);
+
+            Spawn(object);
         }
     }
 } // Engine

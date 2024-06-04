@@ -69,8 +69,10 @@ namespace Engine
 
     void ConsoleEngine::Run()
     {
+
         while (true)
         {
+
             Tick();
 
             //TODO do in threat

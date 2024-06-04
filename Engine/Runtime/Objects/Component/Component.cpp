@@ -33,8 +33,15 @@ namespace Engine
         return root_ref->position;
     }
 
-    Component* Component::Copy()
+    Component* Component::Clone()
     {
-        return new this;
+        Component* newComponent = new Component();
+        newComponent->SetComponentData(this);
+        return newComponent;
+    }
+
+    void Component::SetComponentData(Component* reference)
+    {
+        root_ref = reference->root_ref;
     }
 } // Engine

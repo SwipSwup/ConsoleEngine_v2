@@ -26,9 +26,9 @@ namespace Engine
         GameObject(GameObject* gameObject);
 
         Vector3D* position;
+        char* name;
     private:
         Scene* scene_ref;
-        char* name;
         std::list<Component*> components;
 
     public:
@@ -39,6 +39,8 @@ namespace Engine
             components.push_back(component);
             return component;
         }
+
+        const std::list<Component*> GetComponents() const;
 
         template<class T>
         T* GetComponent()
@@ -59,6 +61,8 @@ namespace Engine
         Scene* GetScene();
 
         void SetScene(Scene* scene);
+
+
 
     private:
         void TickComponents(float deltaTime);

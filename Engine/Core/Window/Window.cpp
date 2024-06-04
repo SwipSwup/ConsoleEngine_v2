@@ -39,18 +39,20 @@ namespace Engine
         WUpdateConsoleMode(ENABLE_EXTENDED_FLAGS , false);*/
 
         //TODO make this modular
-        CONSOLE_CURSOR_INFO cursorInfo;
-        GetConsoleCursorInfo(hConsole, &cursorInfo);
-        cursorInfo.bVisible = false; // Set cursor visibility to false (hide)
-        SetConsoleCursorInfo(hConsole, &cursorInfo);
+
 
         WUpdateConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING, true);
 
         LoadConsoleFontInfo();
 
         WSetConsoleTitle("Console Engine");
-        //360 360
-        WSetConsoleSize(1000, 1000);
+        //TODO make this modular
+        WSetConsoleSize(500, 500);
+
+        CONSOLE_CURSOR_INFO cursorInfo;
+        GetConsoleCursorInfo(hConsole, &cursorInfo);
+        cursorInfo.bVisible = false; // Set cursor visibility to false (hide)
+        SetConsoleCursorInfo(hConsole, &cursorInfo);
 
         WShowWindow();
 
@@ -139,15 +141,6 @@ namespace Engine
         if (!renderer)
             renderer->SetBufferSize(GetWindowCharacterSize());
 
-        if (hwndConsole)
-        {
-            MoveWindow(hwndConsole, 0, 0, 0, 0, TRUE);
-        }
-        else
-        {
-            std::cerr << "Error getting console window handle: " << GetLastError() << std::endl;
-        }
-
         SMALL_RECT windowSize;
         windowSize.Left = 0;
         windowSize.Top = 0;
@@ -158,7 +151,15 @@ namespace Engine
         bufferSize.X = (short) (width / fontConsole.dwFontSize.X);
         bufferSize.Y = (short) (height / fontConsole.dwFontSize.Y);
 
-        // Make sure the console window size fits within the new buffer size
+        if (hwndConsole)
+        {
+            MoveWindow(hwndConsole, 0, 0, width, height, TRUE);
+        }
+        else
+        {
+            std::cerr << "Error getting console window handle: " << GetLastError() << std::endl;
+        }
+
         if (!SetConsoleScreenBufferSize(hConsole, bufferSize))
         {
             std::cerr << "[Window] Error setting console screen buffer size: {X: " << bufferSize.X << ", Y:"

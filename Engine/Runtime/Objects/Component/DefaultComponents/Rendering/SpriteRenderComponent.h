@@ -23,6 +23,11 @@ namespace Engine
         void Tick(float deltaTime) override;
 
         void OnSpawn() override;
+
+        void SetComponentData(Component* reference) override;
+
+        Component* Clone() override;
+
     };
 
 } // Engine

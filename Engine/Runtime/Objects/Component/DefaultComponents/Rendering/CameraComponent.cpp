@@ -31,4 +31,11 @@ namespace Engine
                 position->z
         );
     }
+
+    Component* CameraComponent::Clone()
+    {
+        CameraComponent* newComponent = new CameraComponent();
+        newComponent->SetComponentData(this);
+        return newComponent;
+    }
 } // Engine

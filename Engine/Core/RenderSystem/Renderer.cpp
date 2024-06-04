@@ -134,6 +134,7 @@ namespace Engine
 
     void Renderer::WDrawSprite(Sprite* sprite, int originX, int originY, int z)
     {
+
         //todo might be able to be done in just one loop
         //todo fix if x is bigger than x dimension that it doesnt loop back one y lower
         for (int y = 0; y < sprite->textureDimensions->y; ++y)

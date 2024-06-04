@@ -12,7 +12,10 @@ namespace Game
 
     class CameraController : public Engine::Component
     {
+    public:
         void Tick(float deltaTime) override;
+
+        Component* Clone() override;
     };
 
 } // Game

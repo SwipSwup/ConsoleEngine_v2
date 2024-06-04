@@ -27,7 +27,7 @@ int main()
     scene.AddSceneObject(&camera);
 
 
-    Engine::GameObject object = Engine::GameObject();
+    Engine::GameObject object = Engine::GameObject("Object");
     Engine::SpriteRenderComponent* srComp = object.AddComponent<Engine::SpriteRenderComponent>();
 
     wchar_t** texture = new wchar_t* [3]
@@ -53,7 +53,18 @@ int main()
 
     Engine::ConsoleEngine::sceneManager->LoadScene(&scene);
 
+
+    for (int i = 0; i < 50; ++i)
+    {
+    Engine::GameObject* obj = scene.Spawn(&object);
+
+    obj->position = new Engine::Vector3D(rand()%101, rand()%101, 0);
+
+    }
+
+
     engine.Start();
+
 
     while (true);
 
