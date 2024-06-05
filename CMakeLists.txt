@@ -34,6 +34,8 @@ add_executable(ConsoleEngine_v2 main.cpp
         Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.h
         Engine/Core/InputSystem/InputSystem.cpp
         Engine/Core/InputSystem/InputSystem.h
+        Engine/External/lodepng/lodepng.cpp
+        Engine/External/lodepng/lodepng.h
         Game/Scripts/Player/CameraController.cpp
         Game/Scripts/Player/CameraController.h
 )

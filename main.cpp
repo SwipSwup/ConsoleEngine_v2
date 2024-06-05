@@ -69,8 +69,9 @@ int main()
 
     //Engine::Sprite* sprite = new Engine::Sprite(texture, color, Engine::Vector2D(3, 3));
     Engine::Sprite* sprite = new Engine::Sprite();
+    sprite->Load2DTextureFromFile("C:\\FH\\SS2024\\PROGR\\ConsoleEngine_v2\\Game\\Assets\\Textures\\Debug\\T_Debug.txt");
+    sprite->Load2DColorFromFile("C:\\FH\\SS2024\\PROGR\\ConsoleEngine_v2\\Game\\Assets\\Textures\\Debug\\T_Debug_Color.png");
     sprite->Load2DColor(color);
-    sprite->Load2DTextureFromFile("C:\\FH\\SS2024\\PROGR\\ConsoleEngine_v2\\Game\\Assets\\Textures\\Tree\\T_Tree.txt");
 
     srComp->sprite_ref = sprite;
 

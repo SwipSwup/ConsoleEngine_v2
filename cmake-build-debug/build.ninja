@@ -154,6 +154,13 @@ build CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/InputSystem/InputSystem.cpp.ob
   OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
   OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\Core\InputSystem
 
+build CMakeFiles/ConsoleEngine_v2.dir/Engine/External/lodepng/lodepng.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine/External/lodepng/lodepng.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
+  DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Engine\External\lodepng\lodepng.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/FH/SS2024/PROGR/ConsoleEngine_v2/Engine
+  OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConsoleEngine_v2.dir\Engine\External\lodepng
+
 build CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.obj: CXX_COMPILER__ConsoleEngine_v2_unscanned_Debug C$:/FH/SS2024/PROGR/ConsoleEngine_v2/Game/Scripts/Player/CameraController.cpp || cmake_object_order_depends_target_ConsoleEngine_v2
   DEP_FILE = CMakeFiles\ConsoleEngine_v2.dir\Game\Scripts\Player\CameraController.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -169,7 +176,7 @@ build CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.o
 #############################################
 # Link the executable ConsoleEngine_v2.exe
 
-build ConsoleEngine_v2.exe: CXX_EXECUTABLE_LINKER__ConsoleEngine_v2_Debug CMakeFiles/ConsoleEngine_v2.dir/main.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/ConsoleEngine.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/Scene.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/GameObject.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/Component.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/RenderSystem/Renderer.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector2D.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector3D.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Color/Color.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Sprite/Sprite.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/SceneManager.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/InputSystem/InputSystem.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.obj
+build ConsoleEngine_v2.exe: CXX_EXECUTABLE_LINKER__ConsoleEngine_v2_Debug CMakeFiles/ConsoleEngine_v2.dir/main.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/ConsoleEngine.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/Scene.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/GameObject.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/Component.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/RenderSystem/Renderer.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector2D.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector3D.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Color/Color.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Sprite/Sprite.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Scene/SceneManager.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/CameraComponent.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Objects/Component/DefaultComponents/Rendering/SpriteRenderComponent.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/InputSystem/InputSystem.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Engine/External/lodepng/lodepng.cpp.obj CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ConsoleEngine_v2.dir

@@ -167,17 +167,22 @@ namespace Engine
         if(width != textureDimensions->x || height != textureDimensions->y) {
             std::cerr << "[Texture] Color file has incorrect dimensions" << std::endl;
             return;
-        }   
+        }
 
         Color** colorArray = new Color*[textureDimensions->y];
-
+        //the pixels are now in the vector "image", 4 bytes per pixel, ordered RGBARGBA..., use it as texture, draw it, ...
+        /*for (const auto &item: image) {
+            std::cout << (int)item << std::endl;
+        }*/
         for (int i = 0; i < textureDimensions->y; ++i)
         {
             colorArray[i] = new Color[textureDimensions->x];
 
-            for (int j = 0; j < textureDimensions->x; ++j)
+            for (int j = 0; j < textureDimensions->x; j++)
             {
-                std::cout << image[textureDimensions->y * i + j] << std::endl;
+                std::cout << (int)image[textureDimensions->x * i + j] << std::endl;
+
+                //colorArray[i][j] = Color((int)textureDimensions->y * i + j, (int)textureDimensions->y * i + j + 1, (int)textureDimensions->y * i + j + 2, false);
             }
         }
     }
