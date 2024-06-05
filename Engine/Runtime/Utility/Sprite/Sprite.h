@@ -14,6 +14,7 @@ namespace Engine
         struct Sprite
         {
         public:
+            Sprite();
             Sprite(wchar_t** texture, Vector2D textureDimensions);
             Sprite(wchar_t** texture, Color** color, Vector2D textureDimensions);
             ~Sprite();
@@ -31,6 +32,9 @@ namespace Engine
             void Load2DColor(Color** color);
 
             void Load2DTextureAndColor(wchar_t** texture, Color** color);
+
+            void Load2DTextureFromFile(char* path);
+            void Load2DColorFromFile(char* path);
         private:
     };
 

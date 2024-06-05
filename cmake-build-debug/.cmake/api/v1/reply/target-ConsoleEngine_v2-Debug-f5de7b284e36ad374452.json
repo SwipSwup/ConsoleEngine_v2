@@ -323,12 +323,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Game/Player/CameraController.cpp",
+			"path" : "Game/Scripts/Player/CameraController.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Game/Player/CameraController.h",
+			"path" : "Game/Scripts/Player/CameraController.h",
 			"sourceGroupIndex" : 1
 		}
 	],

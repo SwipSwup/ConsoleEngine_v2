@@ -7,6 +7,7 @@
 #include "ConsoleEngine.h"
 #include "Core/InputSystem/InputSystem.h"
 #include "Runtime/Utility/Vector/Vector3D.h"
+#include "Runtime/Objects/GameObject.h"
 
 namespace Game
 {

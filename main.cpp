@@ -11,8 +11,13 @@
 #include "Runtime/Utility/Sprite/Sprite.h"
 #include "Runtime/Utility/Vector/Vector2D.h"
 #include "Runtime/Utility/Vector/Vector3D.h"
-#include "Game/Player/CameraController.h"
+#include "Game/Scripts/Player/CameraController.h"
 
+
+Engine::Scene* CreateDemoSceneOne()
+{
+
+}
 
 int main()
 {
@@ -30,21 +35,42 @@ int main()
     Engine::GameObject object = Engine::GameObject("Object");
     Engine::SpriteRenderComponent* srComp = object.AddComponent<Engine::SpriteRenderComponent>();
 
-    wchar_t** texture = new wchar_t* [3]
+    /*wchar_t** texture = new wchar_t* [3]
             {
                     new wchar_t[3]{'+', '^', '+',},
                     new wchar_t[3]{'|', ' ', '>',},
                     new wchar_t[3]{'+', '-', '+',}
-            };
+            };*/
 
-    Engine::Color** color = new Engine::Color* [3]
+        /*Engine::Color** color = new Engine::Color* [3]
+                {
+                        new Engine::Color[3]{Engine::Color::BLU, Engine::Color::RED, Engine::Color::BLU},
+                        new Engine::Color[3]{Engine::Color::BLU, Engine::Color::BLU, Engine::Color::GRN},
+                        new Engine::Color[3]{Engine::Color::BLU, Engine::Color::BLU, Engine::Color::BLU},
+                };*/
+
+    Engine::Color** color = new Engine::Color* [12]
             {
-                    new Engine::Color[3]{Engine::Color::BLU, Engine::Color::RED, Engine::Color::BLU},
-                    new Engine::Color[3]{Engine::Color::BLU, Engine::Color::BLU, Engine::Color::GRN},
-                    new Engine::Color[3]{Engine::Color::BLU, Engine::Color::BLU, Engine::Color::BLU},
+                    new Engine::Color[30]{Engine::Color::BLU, Engine::Color::RED, Engine::Color::BLU, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::BLU, Engine::Color::BLU, Engine::Color::GRN, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::BLU, Engine::Color::BLU, Engine::Color::BLU, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    // The rest of the rows initialized to Engine::Color::WHT
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
+                    new Engine::Color[30]{Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT, Engine::Color::WHT},
             };
 
-    Engine::Sprite* sprite = new Engine::Sprite(texture, color, Engine::Vector2D(3, 3));
+
+    //Engine::Sprite* sprite = new Engine::Sprite(texture, color, Engine::Vector2D(3, 3));
+    Engine::Sprite* sprite = new Engine::Sprite();
+    sprite->Load2DColor(color);
+    sprite->Load2DTextureFromFile("C:\\FH\\SS2024\\PROGR\\ConsoleEngine_v2\\Game\\Assets\\Textures\\Tree\\T_Tree.txt");
 
     srComp->sprite_ref = sprite;
 
@@ -56,9 +82,9 @@ int main()
 
     for (int i = 0; i < 50; ++i)
     {
-    Engine::GameObject* obj = scene.Spawn(&object);
+        Engine::GameObject* obj = scene.Spawn(&object);
 
-    obj->position = new Engine::Vector3D(rand()%101, rand()%101, 0);
+        obj->position = new Engine::Vector3D(rand() % 501 - 250, rand() % 501 - 250, 0);
 
     }
 
