@@ -120,26 +120,27 @@ namespace Engine
             }
             textureList.push_back(charList);
 
-            if(charList->size() > maxVerticalDimension)
+            if (charList->size() > maxVerticalDimension)
                 maxVerticalDimension = charList->size();
         }
 
         file.close();
 
-        wchar_t ** textureArray = new wchar_t*[textureList.size()];
+        wchar_t** textureArray = new wchar_t* [textureList.size()];
 
         for (int i = 0; i < textureList.size(); ++i)
         {
-            textureArray[i] = new wchar_t [maxVerticalDimension];
+            textureArray[i] = new wchar_t[maxVerticalDimension];
 
-            if(textureList[i]->size() != maxVerticalDimension) {
+            if (textureList[i]->size() != maxVerticalDimension)
+            {
                 for (int j = textureList[i]->size(); j < maxVerticalDimension; ++j)
                 {
                     textureList[i]->push_back(' ');
                 }
             }
 
-            wchar_t* charArray = new wchar_t [textureList[i]->size()];
+            wchar_t* charArray = new wchar_t[textureList[i]->size()];
             std::copy(textureList[i]->begin(), textureList[i]->end(), charArray);
             textureArray[i] = charArray;
 
@@ -159,32 +160,38 @@ namespace Engine
         unsigned error = lodepng::decode(image, width, height, path);
 
         //if there's an error, display it
-        if(error) {
+        if (error)
+        {
             std::cout << "[Texture] decoder error " << error << ": " << lodepng_error_text(error) << std::endl;
             return;
         }
 
-        if(width != textureDimensions->x || height != textureDimensions->y) {
+        if (width != textureDimensions->x || height != textureDimensions->y)
+        {
             std::cerr << "[Texture] Color file has incorrect dimensions" << std::endl;
             return;
         }
 
-        Color** colorArray = new Color*[textureDimensions->y];
+        Color*** colorArray = new Color** [textureDimensions->y];
         //the pixels are now in the vector "image", 4 bytes per pixel, ordered RGBARGBA..., use it as texture, draw it, ...
         /*for (const auto &item: image) {
             std::cout << (int)item << std::endl;
         }*/
-        for (int i = 0; i < textureDimensions->y; ++i)
+        for (int y = 0; y < textureDimensions->y; ++y)
         {
-            colorArray[i] = new Color[textureDimensions->x];
+            colorArray[y] = new Color*[textureDimensions->x];
 
-            for (int j = 0; j < textureDimensions->x; j++)
+            for (int i = 0, x = 0; i < textureDimensions->x * 4; i += 4, x++)
             {
-                std::cout << (int)image[textureDimensions->x * i + j] << std::endl;
 
-                //colorArray[i][j] = Color((int)textureDimensions->y * i + j, (int)textureDimensions->y * i + j + 1, (int)textureDimensions->y * i + j + 2, false);
+                std::cout << (int) image[textureDimensions->x * y + i] << std::endl;
+                std::cout << (int) image[textureDimensions->x * y + i] + 1 << std::endl;
+                std::cout << (int) image[textureDimensions->x * y + i] + 2 << std::endl;
+
+                colorArray[y][x] = new Color((int) image[textureDimensions->x * y + i], (int) image[textureDimensions->x * y + i + 1], (int) image[textureDimensions->x * y + i + 2], false);
             }
         }
+        color = colorArray;
     }
 
 
