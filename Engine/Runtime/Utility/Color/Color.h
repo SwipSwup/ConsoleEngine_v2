@@ -6,6 +6,7 @@
 #define CONSOLEENGINE_V2_COLOR_H
 
 #include <string>
+#include <cstdint>
 
 namespace Engine
 {
@@ -20,6 +21,7 @@ namespace Engine
 
         const char* GetEscapeCode();
         const int GetEscapeCodeLength();
+        const long GetHashCode();
 
         Color operator+(Color color);
         Color* operator+=(Color color);
@@ -29,6 +31,7 @@ namespace Engine
     private:
         std::string escapeCode;
         int escapeCodeLength;
+        long hash = 0;
 
     public:
         //Regular text

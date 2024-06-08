@@ -41,6 +41,10 @@ namespace Engine
         HANDLE hConsole{};
         int* zBufferIndex{};
 
+        bool bRenderThreatRender = false;
+        bool bRenderThreatActive = false;
+        void RenderThreat(int xStart, int yStart, int xEnd, int yEnd);
+
         int TranslateToBufferIndex(int x, int y, int xDimension);
 
         void InitRenderBuffer();

@@ -162,4 +162,7 @@ CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Sprite/Sprite.cpp.obj: \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/string.h \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
  G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Vector/Vector2D.h \
- G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Color/Color.h
+ G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Color/Color.h \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/stdint.h

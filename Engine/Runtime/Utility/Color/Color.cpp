@@ -24,6 +24,11 @@ namespace Engine
         code.append("m");
         escapeCode = code;
         escapeCodeLength = (int)code.length();
+        hash |= r;
+        hash << 8;
+        hash |= g;
+        hash << 8;
+        hash |= b;
     }
 
     const char* Color::GetEscapeCode()
@@ -34,6 +39,11 @@ namespace Engine
     const int Color::GetEscapeCodeLength()
     {
         return escapeCodeLength;
+    }
+
+    const long Color::GetHashCode()
+    {
+        return hash;
     }
 
     Color Color::operator+(Color color)
@@ -48,7 +58,7 @@ namespace Engine
 
     bool Color::operator!=(Color color)
     {
-        return !(*this == color);
+        return hash != color.GetHashCode();
     }
 
     Color* Color::operator+=(Color color)
@@ -126,4 +136,6 @@ namespace Engine
     const Color Color::reset{"\x1b[0m"};
     const Color Color::CRESET{"\x1b[0m"};
     const Color Color::COLOR_RESET{"\x1b[0m"};
+
+
 } // Engine

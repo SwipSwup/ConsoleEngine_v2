@@ -128,7 +128,10 @@ namespace Engine
     {
         renderBuffer[xy] = RenderObject{data, color};
 
-        zBufferIndex[xy] = z;
+
+        //return x + y * xDimension;
+
+        zBufferIndex[xy] = data == ' ' ? z - 1000 : z;
     }
 
 
@@ -158,6 +161,7 @@ namespace Engine
                                 bufferSize.X
                         ),
                         z,
+                        //'a',
                         sprite->GetTexture()[y][x],
                         *(sprite->GetColor()[y][x])
                         //Color(255, 0, 0, false)
@@ -197,5 +201,12 @@ namespace Engine
     {
         return previousRenderBuffer[xy].data != renderBuffer[xy].data ||
                previousRenderBuffer[xy].color != renderBuffer[xy].color;
+    }
+
+    void Renderer::RenderThreat(int xStart, int yStart, int xEnd, int yEnd)
+    {
+        while(bRenderThreadActive) {
+            //if()
+        }
     }
 } // Engine

@@ -122,7 +122,6 @@ namespace Engine
             tCounter = 0;
             if (settings->showFps)
             {
-
                 title += " | FPS: " + std::to_string((int) (1 / deltaTime));
             }
             window->WSetConsoleTitle(const_cast<char*>(title.c_str()));

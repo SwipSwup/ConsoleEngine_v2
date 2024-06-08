@@ -97,4 +97,7 @@ CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Color/Color.cpp.obj: \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
- G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/stdint.h

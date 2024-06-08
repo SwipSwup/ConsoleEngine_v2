@@ -390,5 +390,8 @@ CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/RenderSystem/Renderer.cpp.obj: \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/mcx.h \
  G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/imm.h \
  G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Color/Color.h \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ G:/IDEs/JetBrains/apps/CLion/ch-0/241.17011.124/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
  G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Sprite/Sprite.h \
  G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Vector/Vector2D.h
