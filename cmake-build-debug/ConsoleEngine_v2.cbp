@@ -120,6 +120,12 @@
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Core/Window/Window.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/External/lodepng/lodepng.cpp">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/External/lodepng/lodepng.h">
+			<Option target="ConsoleEngine_v2"/>
+		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Objects/Component/Component.cpp">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
@@ -168,10 +174,10 @@
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Engine/Runtime/Utility/Vector/Vector3D.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
-		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Game/Player/CameraController.cpp">
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Game/Scripts/Player/CameraController.cpp">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
-		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Game/Player/CameraController.h">
+		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/Game/Scripts/Player/CameraController.h">
 			<Option target="ConsoleEngine_v2"/>
 		</Unit>
 		<Unit filename="G:/FH/Sem2/PROGR/ConsoleEngine_v2/main.cpp">

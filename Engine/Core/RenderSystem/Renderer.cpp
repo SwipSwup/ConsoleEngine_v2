@@ -158,8 +158,9 @@ namespace Engine
                                 bufferSize.X
                         ),
                         z,
-                        sprite->texture[y][x],
-                        sprite->color[y][x]
+                        sprite->GetTexture()[y][x],
+                        *(sprite->GetColor()[y][x])
+                        //Color(255, 0, 0, false)
                 );
             }
         }

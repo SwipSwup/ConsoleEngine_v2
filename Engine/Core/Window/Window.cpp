@@ -47,7 +47,7 @@ namespace Engine
 
         WSetConsoleTitle("Console Engine");
         //TODO make this modular
-        WSetConsoleSize(500, 500);
+        WSetConsoleSize(600, 600);
 
         CONSOLE_CURSOR_INFO cursorInfo;
         GetConsoleCursorInfo(hConsole, &cursorInfo);

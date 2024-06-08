@@ -272,6 +272,30 @@ Engine/Core/Window/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Core/Window/Window.cpp.s
 .PHONY : Engine/Core/Window/Window.cpp.s
 
+Engine/External/lodepng/lodepng.obj: Engine/External/lodepng/lodepng.cpp.obj
+.PHONY : Engine/External/lodepng/lodepng.obj
+
+# target to build an object file
+Engine/External/lodepng/lodepng.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/External/lodepng/lodepng.cpp.obj
+.PHONY : Engine/External/lodepng/lodepng.cpp.obj
+
+Engine/External/lodepng/lodepng.i: Engine/External/lodepng/lodepng.cpp.i
+.PHONY : Engine/External/lodepng/lodepng.i
+
+# target to preprocess a source file
+Engine/External/lodepng/lodepng.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/External/lodepng/lodepng.cpp.i
+.PHONY : Engine/External/lodepng/lodepng.cpp.i
+
+Engine/External/lodepng/lodepng.s: Engine/External/lodepng/lodepng.cpp.s
+.PHONY : Engine/External/lodepng/lodepng.s
+
+# target to generate assembly for a file
+Engine/External/lodepng/lodepng.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/External/lodepng/lodepng.cpp.s
+.PHONY : Engine/External/lodepng/lodepng.cpp.s
+
 Engine/Runtime/Objects/Component/Component.obj: Engine/Runtime/Objects/Component/Component.cpp.obj
 .PHONY : Engine/Runtime/Objects/Component/Component.obj
 
@@ -464,29 +488,29 @@ Engine/Runtime/Utility/Vector/Vector3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Engine/Runtime/Utility/Vector/Vector3D.cpp.s
 .PHONY : Engine/Runtime/Utility/Vector/Vector3D.cpp.s
 
-Game/Player/CameraController.obj: Game/Player/CameraController.cpp.obj
-.PHONY : Game/Player/CameraController.obj
+Game/Scripts/Player/CameraController.obj: Game/Scripts/Player/CameraController.cpp.obj
+.PHONY : Game/Scripts/Player/CameraController.obj
 
 # target to build an object file
-Game/Player/CameraController.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Player/CameraController.cpp.obj
-.PHONY : Game/Player/CameraController.cpp.obj
+Game/Scripts/Player/CameraController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.obj
+.PHONY : Game/Scripts/Player/CameraController.cpp.obj
 
-Game/Player/CameraController.i: Game/Player/CameraController.cpp.i
-.PHONY : Game/Player/CameraController.i
+Game/Scripts/Player/CameraController.i: Game/Scripts/Player/CameraController.cpp.i
+.PHONY : Game/Scripts/Player/CameraController.i
 
 # target to preprocess a source file
-Game/Player/CameraController.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Player/CameraController.cpp.i
-.PHONY : Game/Player/CameraController.cpp.i
+Game/Scripts/Player/CameraController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.i
+.PHONY : Game/Scripts/Player/CameraController.cpp.i
 
-Game/Player/CameraController.s: Game/Player/CameraController.cpp.s
-.PHONY : Game/Player/CameraController.s
+Game/Scripts/Player/CameraController.s: Game/Scripts/Player/CameraController.cpp.s
+.PHONY : Game/Scripts/Player/CameraController.s
 
 # target to generate assembly for a file
-Game/Player/CameraController.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Player/CameraController.cpp.s
-.PHONY : Game/Player/CameraController.cpp.s
+Game/Scripts/Player/CameraController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ConsoleEngine_v2.dir\build.make CMakeFiles/ConsoleEngine_v2.dir/Game/Scripts/Player/CameraController.cpp.s
+.PHONY : Game/Scripts/Player/CameraController.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -539,6 +563,9 @@ help:
 	@echo ... Engine/Core/Window/Window.obj
 	@echo ... Engine/Core/Window/Window.i
 	@echo ... Engine/Core/Window/Window.s
+	@echo ... Engine/External/lodepng/lodepng.obj
+	@echo ... Engine/External/lodepng/lodepng.i
+	@echo ... Engine/External/lodepng/lodepng.s
 	@echo ... Engine/Runtime/Objects/Component/Component.obj
 	@echo ... Engine/Runtime/Objects/Component/Component.i
 	@echo ... Engine/Runtime/Objects/Component/Component.s
@@ -563,9 +590,9 @@ help:
 	@echo ... Engine/Runtime/Utility/Vector/Vector3D.obj
 	@echo ... Engine/Runtime/Utility/Vector/Vector3D.i
 	@echo ... Engine/Runtime/Utility/Vector/Vector3D.s
-	@echo ... Game/Player/CameraController.obj
-	@echo ... Game/Player/CameraController.i
-	@echo ... Game/Player/CameraController.s
+	@echo ... Game/Scripts/Player/CameraController.obj
+	@echo ... Game/Scripts/Player/CameraController.i
+	@echo ... Game/Scripts/Player/CameraController.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

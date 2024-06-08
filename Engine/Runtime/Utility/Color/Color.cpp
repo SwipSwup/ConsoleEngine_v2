@@ -22,6 +22,7 @@ namespace Engine
         code.append(";");
         code.append(std::to_string(b));
         code.append("m");
+        escapeCode = code;
         escapeCodeLength = (int)code.length();
     }
 

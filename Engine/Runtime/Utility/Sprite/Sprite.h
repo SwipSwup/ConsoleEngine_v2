@@ -20,8 +20,7 @@ namespace Engine
             ~Sprite();
 
             Vector2D* textureDimensions;
-            wchar_t** texture;
-            Color** color;
+
 
         private:
             void Init(wchar_t** texture, Color** color, Vector2D textureDimensions);
@@ -36,6 +35,12 @@ namespace Engine
             void Load2DTextureFromFile(char* path);
             void Load2DColorFromFile(char* path);
         private:
+            wchar_t** texture;
+            Color*** color;
+
+        public:
+            Color*** GetColor();
+            wchar_t** GetTexture();
     };
 
 } // Engine

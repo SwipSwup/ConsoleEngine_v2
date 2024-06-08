@@ -72,21 +72,22 @@ namespace Engine
 
     void Sprite::Load2DColor(Color** color)
     {
-        if (color == nullptr)
+
+        this->color = new Color** [textureDimensions->y];
+        for (int y = 0; y < textureDimensions->y; ++y)
         {
-            this->color = new Color* [textureDimensions->y];
-            for (int y = 0; y < textureDimensions->y; ++y)
+            this->color[y] = new Color* [textureDimensions->x];
+            for (int x = 0; x < textureDimensions->x; ++x)
             {
-                this->color[y] = new Color[textureDimensions->x];
-                for (int x = 0; x < textureDimensions->x; ++x)
+                if (color == nullptr)
                 {
-                    this->color[y][x] = Color::WHT;
+                    this->color[y][x] = new Color(Color::WHT);
+                }
+                else
+                {
+                    this->color[y][x] = new Color(color[y][x].GetEscapeCode());
                 }
             }
-        }
-        else
-        {
-            this->color = color;
         }
     }
 
@@ -173,26 +174,30 @@ namespace Engine
         }
 
         Color*** colorArray = new Color** [textureDimensions->y];
-        //the pixels are now in the vector "image", 4 bytes per pixel, ordered RGBARGBA..., use it as texture, draw it, ...
-        /*for (const auto &item: image) {
-            std::cout << (int)item << std::endl;
-        }*/
-        for (int y = 0; y < textureDimensions->y; ++y)
-        {
-            colorArray[y] = new Color*[textureDimensions->x];
 
-            for (int i = 0, x = 0; i < textureDimensions->x * 4; i += 4, x++)
-            {
-
-                std::cout << (int) image[textureDimensions->x * y + i] << std::endl;
-                std::cout << (int) image[textureDimensions->x * y + i] + 1 << std::endl;
-                std::cout << (int) image[textureDimensions->x * y + i] + 2 << std::endl;
-
-                colorArray[y][x] = new Color((int) image[textureDimensions->x * y + i], (int) image[textureDimensions->x * y + i + 1], (int) image[textureDimensions->x * y + i + 2], false);
+        colorArray[0] = new Color* [textureDimensions->x];
+        for (int i = 0, x = 0, y = 0; i < textureDimensions->x * textureDimensions->y * 4; i += 4, x++) {
+            if(x == textureDimensions->x) {
+                x = 0;
+                y++;
+                colorArray[y] = new Color* [textureDimensions->x];
             }
+
+            //std::cout << i << " " << i + 1 << " " << i + 2 << " " << i + 3 << std::endl;
+
+            colorArray[y][x] = new Color((int) image[i], (int) image[i + 1],(int) image[i + 2], false);
         }
+
         color = colorArray;
     }
 
+    Color*** Sprite::GetColor()
+    {
+        return color;
+    }
 
+    wchar_t** Sprite::GetTexture()
+    {
+        return texture;
+    }
 } // Engine
