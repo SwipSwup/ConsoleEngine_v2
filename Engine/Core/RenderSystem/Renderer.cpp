@@ -151,7 +151,7 @@ namespace Engine
         {
             renderBuffer[i] = RenderObject();
             updateBuffer[i] = false;
-            zBufferIndex[i] = -1;
+            zBufferIndex[i] = INT_MIN;
         }
     }
 
@@ -178,7 +178,7 @@ namespace Engine
 
         //return x + y * xDimension;
 
-        zBufferIndex[xy] = data == ' ' ? z - 1000 : z;
+        zBufferIndex[xy] = data == ' ' ? INT_MIN : z;
     }
 
 
@@ -201,14 +201,15 @@ namespace Engine
                     continue;
                 }
 
+                //WDrawText(std::to_string(z-originY).c_str(), originX, originY, 1000);
+
                 WriteRawIntoRenderBuffer(
                         TranslateToBufferIndex(
                                 buffX,
                                 buffY,
                                 bufferSize.X
                         ),
-                        z,
-                        //'a',
+                        z-originY,
                         sprite->GetTexture()[y][x],
                         *(sprite->GetColor()[y][x])
                         //Color(255, 0, 0, false)
