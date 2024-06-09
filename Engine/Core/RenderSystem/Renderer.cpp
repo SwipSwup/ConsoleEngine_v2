@@ -38,6 +38,53 @@ namespace Engine
         this->bufferSize = size;
     }
 
+    void Renderer::RenderThreat(int xStart, int yStart, int xEnd, int yEnd)
+    {
+        while(bRenderThreadActive) {
+            if(bRenderThreatRender) {
+                DWORD charsWritten;
+
+                for (int y = yStart; y < yEnd; ++y)
+                {
+                    for (int x = xStart; x < xEnd; ++x)
+                    {
+                        int bufferIndex = TranslateToBufferIndex(x, y, bufferSize.X);
+                        //if (!updateBuffer[bufferIndex])
+
+                        if (!HasRenderObjectUpdated(bufferIndex))
+                        {
+                            continue;
+                        }
+                        RenderObject obj = renderBuffer[bufferIndex];
+
+                        Color c = obj.color;
+
+                        SetConsoleCursorPosition(hConsole, COORD{(SHORT) x, (SHORT) y});
+                        if (!WriteConsoleA(
+                                hConsole,
+                                c.GetEscapeCode(),
+                                c.GetEscapeCodeLength(),
+                                &charsWritten,
+                                nullptr
+                        ) || !WriteConsoleW(
+                                hConsole,
+                                &obj.data,
+                                1,
+                                &charsWritten,
+                                nullptr
+                        ))
+                        {
+                            std::cerr << "[Renderer] Error writing to console" << std::endl;
+                            return;
+                        }
+                    }
+                }
+
+                ConsumeRenderBuffer();
+            }
+        }
+    }
+
     //TODO create 4 thread and split console into 4 sections
     void Renderer::Render()
     {
@@ -203,10 +250,5 @@ namespace Engine
                previousRenderBuffer[xy].color != renderBuffer[xy].color;
     }
 
-    void Renderer::RenderThreat(int xStart, int yStart, int xEnd, int yEnd)
-    {
-        while(bRenderThreadActive) {
-            //if()
-        }
-    }
+
 } // Engine
