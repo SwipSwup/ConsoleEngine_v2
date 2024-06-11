@@ -20,8 +20,8 @@ namespace Engine
         Color(int r, int g, int b, bool bIsBackground);
 
         const char* GetEscapeCode();
-        const int GetEscapeCodeLength();
-        const long GetHashCode();
+        int GetEscapeCodeLength() const;
+        long GetHashCode() const;
 
         Color operator+(Color color);
         Color* operator+=(Color color);

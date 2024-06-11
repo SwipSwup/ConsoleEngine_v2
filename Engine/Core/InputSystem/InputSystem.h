@@ -11,7 +11,7 @@ namespace Engine
     class InputSystem
     {
     public:
-        bool KeyPressed(char key);
+        static bool KeyPressed(char key);
     };
 
 } // Engine

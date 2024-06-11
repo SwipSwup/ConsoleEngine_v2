@@ -23,30 +23,30 @@ namespace Game
 
         Component::Tick(deltaTime);
 
-        //TODO there is something wrong
+        //TODO look into inverted position
         float movementSpeed = -20;
-
-        if (Engine::ConsoleEngine::inputSystem->KeyPressed(VK_SHIFT))
+        //TODO implement wrapper for virtual keys
+        if (Engine::InputSystem::KeyPressed(VK_SHIFT))
         {
             movementSpeed -= 30;
         }
 
-        if (Engine::ConsoleEngine::inputSystem->KeyPressed('W'))
+        if (Engine::InputSystem::KeyPressed('W'))
         {
             *GetPosition() += Engine::Vector3D(0, 1, 0) * deltaTime * movementSpeed;
         }
 
-        if (Engine::ConsoleEngine::inputSystem->KeyPressed('A'))
+        if (Engine::InputSystem::KeyPressed('A'))
         {
             *GetPosition() += Engine::Vector3D(-1, 0, 0) * deltaTime * movementSpeed;
         }
 
-        if (Engine::ConsoleEngine::inputSystem->KeyPressed('S'))
+        if (Engine::InputSystem::KeyPressed('S'))
         {
             *GetPosition() += Engine::Vector3D(0, -1, 0) * deltaTime * movementSpeed;
         }
 
-        if (Engine::ConsoleEngine::inputSystem->KeyPressed('D'))
+        if (Engine::InputSystem::KeyPressed('D'))
         {
             *GetPosition() += Engine::Vector3D(1, 0, 0) * deltaTime * movementSpeed;
         }

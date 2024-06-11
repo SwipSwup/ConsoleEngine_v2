@@ -36,12 +36,12 @@ namespace Engine
         return escapeCode.c_str();
     }
 
-    const int Color::GetEscapeCodeLength()
+    int Color::GetEscapeCodeLength() const
     {
         return escapeCodeLength;
     }
 
-    const long Color::GetHashCode()
+    long Color::GetHashCode() const
     {
         return hash;
     }

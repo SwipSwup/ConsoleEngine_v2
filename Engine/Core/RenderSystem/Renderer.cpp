@@ -4,6 +4,7 @@
 
 #include <cstring>
 #include <iostream>
+#include <utility>
 #include "Renderer.h"
 #include "../../Runtime/Utility/Sprite/Sprite.h"
 #include "../../Runtime/Utility/Vector/Vector2D.h"
@@ -15,7 +16,7 @@ namespace Engine
         data = ' ';
     }
 
-    RenderObject::RenderObject(wchar_t data, Color color) : color(color)
+    RenderObject::RenderObject(wchar_t data, Color color) : color(std::move(color))
     {
         this->data = data;
     }
@@ -168,12 +169,12 @@ namespace Engine
         {
         }*/
             updateBuffer[xy] = true;
-        ForceWriteRawIntoRenderBuffer(xy, z, data, color);
+        ForceWriteRawIntoRenderBuffer(xy, z, data, std::move(color));
     }
 
     void Renderer::ForceWriteRawIntoRenderBuffer(int xy, int z, wchar_t data, Color color)
     {
-        renderBuffer[xy] = RenderObject{data, color};
+        renderBuffer[xy] = RenderObject{data, std::move(color)};
 
 
         //return x + y * xDimension;
@@ -223,7 +224,7 @@ namespace Engine
         WDrawText(text, Color::WHT, originX, originY, z);
     }
 
-    void Renderer::WDrawText(const char* text, Color color, int originX, int originY, int z)
+    void Renderer::WDrawText(const char* text, const Color& color, int originX, int originY, int z)
     {
         for (int x = 0; x < strlen(text); ++x)
         {

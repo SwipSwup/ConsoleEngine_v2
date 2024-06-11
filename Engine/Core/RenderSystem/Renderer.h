@@ -62,7 +62,7 @@ namespace Engine
 
         void WDrawText(const char* text, int originX, int originY, int z);
 
-        void WDrawText(const char* text, Color color, int originX, int originY, int z);
+        void WDrawText(const char* text, const Color& color, int originX, int originY, int z);
     };
 
 } // Engine
